@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event with DOM</title>
+</head>
+<body>
+    <h1 onclick="console.log('Hello world')">Introduction of event with Dom</h1>
+
+    <button onclick="console.log(78)">Click me</button>
+    <button onclick="console.log(37)">Learn more</button>
+
+
+    <!-- System 1: Directly add event on the html(not usable) -->
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+
+    <!-- System 2: Add onclick function to change the color-->
+     <button onclick="makeRed()">Make Red</button>
+
+
+     <!-- System 3: With an id and id on function -->
+      <button id="blue-bg">Make Blue</button>
+
+      <button id="purple-bg">Make Purple</button>
+
+
+
+    <script src="event.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
