@@ -20,3 +20,25 @@ const purpleBg = document.getElementById('purple-bg');
 purpleBg.onclick = function (){
     document.body.style.backgroundColor = 'purple';
 }
+
+
+// System 4
+const pinkButton = document.getElementById('pink-bg');
+pinkButton.addEventListener('click', makePink);
+
+function makePink(){
+    document.body.style.backgroundColor = 'pink';
+}
+
+// System 4(Another way)
+const greenButton = document.getElementById('green-bg');
+greenButton.addEventListener('click', function makeGreen(){
+    document.body.style.backgroundColor = 'green';
+})
+
+
+// System 5: Short and final way(Mostly used)
+document.getElementById('dark-bg').addEventListener('click', function(){
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+})
