@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More addEventListener</title>
+</head>
+<body>
+    <h1>More about addEventListener</h1>
+    <button id="more-btn">More Events</button>
+
+    <input type="text" id="input-box">
+
+    <script>
+        document.getElementById('more-btn').addEventListener('mousemove', function(){
+            // console.log("Button Triggered");
+        })
+
+
+        // Focus event
+        document.getElementById('input-box').addEventListener('focus', function(){
+            // console.log('Input field triggered inside by mouse');
+        })
+
+        // Blur event
+        document.getElementById('input-box').addEventListener('blur', function(){
+            // console.log('Input field triggered outside by mouse');
+        })
+
+
+        // Keydown event
+        document.getElementById('input-box').addEventListener('keydown', function(){
+            // console.log('Key typed inside the input field');
+        })
+        // With event parameter inside the function
+        document.getElementById('input-box').addEventListener('keydown', function(event){
+            // console.log(event);
+        })
+        // With event parameter inside the function
+        document.getElementById('input-box').addEventListener('keydown', function(event){
+            // console.log(event.target.value);
+        })
+        // With event parameter inside the function
+        document.getElementById('input-box').addEventListener('keypress', function(event){
+            // console.log(event.target.value);
+        })
+        // With event parameter inside the function
+        document.getElementById('input-box').addEventListener('keyup', function(event){
+            // console.log(event.target.value);
+        })
+
+
+    </script>
+</body>
+</html>
