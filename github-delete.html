@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="secret-text">Github like delete with confirmation</h1>
+
+    <input type="text" id="delete-confirm" placeholder="Please write delete">
+    <button id="delete-btn" disabled>Delete</button>
+
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            document.getElementById('secret-text').style.display = 'none';
+        })
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            if(text === 'delete'){
+                document.getElementById('delete-btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('delete-btn').setAttribute('disabled', true);
+            }
+        })
+    </script>
+
+</body>
+</html>
