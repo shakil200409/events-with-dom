@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding comments</title>
+  </head>
+  <body>
+    <h1>Adding comment with input field</h1>
+
+    <div id="comment-container"></div>
+    <div>
+      <textarea name="" id="comment-input" cols="60" rows="5"></textarea>
+      <br />
+      <button id="post-btn">Post</button>
+    </div>
+
+    <script>
+      // Step-1: Connect input with button by addEventListener function
+      document
+        .getElementById("post-btn")
+        .addEventListener("click", function () {
+            // Step-2: Get the comment inside the input
+          const commentInput = document.getElementById("comment-input");
+          const comment = commentInput.value;
+          console.log(comment)
+
+        //   Step-3: Create a output field and put the input on there
+        const p = document.createElement('p');
+        p.innerText = comment;
+
+        // step-4: Select the parent where you wanna put the comment
+        const commentContainer = document.getElementById('comment-container');
+
+        // Step-5: Push(append) the comment inside the parent
+        commentContainer.appendChild(p);
+
+        // Step-6: Clear the input box
+        commentInput.value = '';
+
+        });
+    </script>
+  </body>
+</html>
